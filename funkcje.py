@@ -43,7 +43,7 @@ def columns(df):
 
     x = []
     for i in range(len(df) - 1):
-        if df['totalDistance'][i + 1] < df['totalDistance'][i]:
+        if (df['lapDistance'][i + 1] < df['lapDistance'][i]) and (df['newLap'][i+1]==0):
             x.append(1)
         else:
             x.append(0)
